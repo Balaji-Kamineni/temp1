@@ -1,0 +1,39 @@
+<html>
+
+
+<head>
+    <title>this is title</title>
+</head>
+
+<body bgcolor="green">
+    <h2> this is rendered html page</h2>
+    <table align="center" border="2">
+        <tr>
+            <th>name</th>
+            <th> email</th>
+            <th>role</th>
+            <th>manager</th>
+            <th>collegues</th>
+        </tr>
+        <tr>
+            <td>{{name}}</td>
+            <td>{{email}}</td>
+            <td>{{role}}</td>
+            <td> {{manager}}</td>
+            <td>{% for i in collegues %}
+
+
+          <div>{% if forloop.counter0|divisibleby:2 == 1%}
+            {{i}}
+        {% endif %}</div>      
+
+
+
+{% endfor %}
+
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
